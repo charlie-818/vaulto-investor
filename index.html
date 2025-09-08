@@ -19,7 +19,8 @@
             line-height: 1.6;
             color: #333;
             background: #fafafa;
-            min-height: 100vh;
+            height: 100vh;
+            overflow: hidden;
             position: relative;
         }
 
@@ -36,7 +37,7 @@
         }
 
         .container {
-            min-height: 100vh;
+            height: 100vh;
             display: flex;
             flex-direction: column;
         }
@@ -78,16 +79,16 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            padding: 2rem;
+            padding: 1rem;
             text-align: center;
         }
 
         .logo-container {
-            margin-bottom: 1.5rem;
+            margin-bottom: 2rem;
         }
 
         .main-logo {
-            max-height: 80px;
+            max-height: 50px;
             width: auto;
         }
 
@@ -95,11 +96,12 @@
         /* Cards Grid */
         .cards-grid {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 0.1rem 0.75rem;
-            margin-bottom: 2rem;
-            margin-top: 2rem;
-            max-width: 1000px;
+            grid-template-columns: repeat(3, 1fr);
+            row-gap: 0.25rem;
+            column-gap: 0.25rem;
+            margin-bottom: 1rem;
+            margin-top: 0.5rem;
+            max-width: 800px;
             width: 100%;
         }
 
@@ -110,6 +112,8 @@
             flex-direction: column;
             align-items: center;
             transition: transform 0.3s ease;
+            margin: -30px;
+            padding: 0;
         }
 
         .card:hover {
@@ -117,8 +121,8 @@
         }
 
         .card-image {
-            width: 200px;
-            height: 200px;
+            width: 180px;
+            height: 180px;
             object-fit: contain;
             transition: transform 0.3s ease;
         }
@@ -130,22 +134,22 @@
         /* Document Buttons */
         .document-buttons {
             display: flex;
-            gap: 2rem;
+            gap: 1.5rem;
             margin-bottom: 0.5rem;
         }
 
         .doc-button {
             background: linear-gradient(135deg, #2563eb, #1d4ed8);
             color: #fff;
-            padding: 1.5rem 4rem;
+            padding: 1rem 2.5rem;
             border: none;
-            border-radius: 16px;
+            border-radius: 12px;
             text-decoration: none;
             font-family: 'League Spartan', sans-serif;
             font-weight: 700;
-            font-size: 1.4rem;
+            font-size: 1.1rem;
             letter-spacing: -0.01em;
-            box-shadow: 0 6px 25px rgba(37, 99, 235, 0.4);
+            box-shadow: 0 4px 20px rgba(37, 99, 235, 0.4);
             transition: all 0.3s ease;
             cursor: pointer;
             position: relative;
@@ -244,21 +248,20 @@
                 margin-bottom: 1rem;
             }
             
-            .cards-grid {
-                grid-template-columns: repeat(2, 1fr);
-    
-                column-gap: 0.5rem;
-                margin-top: 1.5rem;
-                margin-bottom: 1.5rem;
-            }
+             .cards-grid {
+                 grid-template-columns: repeat(3, 1fr);
+                 gap: 0.1rem 0.3rem;
+                 margin-top: 1.5rem;
+                 margin-bottom: 1.5rem;
+             }
             
-            .card-image {
-                width: 200px;
-                height: 200px;
-                margin: -40px;
-                padding: 0;
-                display: block;
-            }
+             .card-image {
+                 width: 120px;
+                 height: 120px;
+                 margin: 0;
+                 padding: 0;
+                 display: block;
+             }
             
             .card {
                 margin: 0;
@@ -266,19 +269,22 @@
                 margin-bottom: -15px;
             }
             
-            .document-buttons {
-                flex-direction: column;
-                gap: 0.75rem;
-                align-items: center;
-                margin-bottom: 0.5rem;
-            }
+             .document-buttons {
+                 flex-direction: row;
+                 gap: 0.5rem;
+                 align-items: center;
+                 justify-content: center;
+                 margin-bottom: 0.5rem;
+             }
             
-            .doc-button {
-                padding: 1rem 2.5rem;
-                font-size: 1.1rem;
-                border-radius: 12px;
-                box-shadow: 0 4px 20px rgba(37, 99, 235, 0.3);
-            }
+             .doc-button {
+                 padding: 0.8rem 1.5rem;
+                 font-size: 1rem;
+                 border-radius: 10px;
+                 box-shadow: 0 4px 20px rgba(37, 99, 235, 0.3);
+                 flex: 1;
+                 max-width: 140px;
+             }
             
             .footer {
                 padding: 1rem;
@@ -300,21 +306,20 @@
                 max-height: 50px;
             }
             
-            .cards-grid {
-                grid-template-columns: repeat(2, 1fr);
-                row-gap: 0;
-                column-gap: 0.25rem;
-                margin-top: 1rem;
-                margin-bottom: 1rem;
-            }
+             .cards-grid {
+                 grid-template-columns: repeat(3, 1fr);
+                 gap: 0.1rem 0.2rem;
+                 margin-top: 1rem;
+                 margin-bottom: 1rem;
+             }
             
-            .card-image {
-                width: 160px;
-                height: 160px;
-                margin: 0;
-                padding: 0;
-                display: block;
-            }
+             .card-image {
+                 width: 100px;
+                 height: 100px;
+                 margin: 0;
+                 padding: 0;
+                 display: block;
+             }
             
             .card {
                 margin: 0;
@@ -322,17 +327,19 @@
                 margin-bottom: -15px;
             }
             
-            .doc-button {
-                padding: 0.8rem 2rem;
-                font-size: 1rem;
-                border-radius: 10px;
-                width: 90%;
-                max-width: 280px;
-            }
-            
-            .document-buttons {
-                gap: 0.5rem;
-            }
+             .doc-button {
+                 padding: 0.7rem 1.2rem;
+                 font-size: 0.9rem;
+                 border-radius: 8px;
+                 flex: 1;
+                 max-width: 120px;
+             }
+             
+             .document-buttons {
+                 flex-direction: row;
+                 gap: 0.4rem;
+                 justify-content: center;
+             }
             
             .footer {
                 padding: 0.75rem;
@@ -340,20 +347,19 @@
             }
         }
 
-        @media (max-width: 360px) {
-            .cards-grid {
-                grid-template-columns: 1fr;
-                row-gap: 0;
-                column-gap: 0;
-            }
-            
-            .card-image {
-                width: 180px;
-                height: 180px;
-                margin: 0;
-                padding: 0;
-                display: block;
-            }
+         @media (max-width: 360px) {
+             .cards-grid {
+                 grid-template-columns: repeat(2, 1fr);
+                 gap: 0.1rem 0.15rem;
+             }
+             
+             .card-image {
+                 width: 80px;
+                 height: 80px;
+                 margin: 0;
+                 padding: 0;
+                 display: block;
+             }
             
             .card {
                 margin: 0;
@@ -390,28 +396,38 @@
                 <a href="PitchDeck.pdf" class="doc-button" target="_blank">Pitch Deck</a>
             </div>
 
-            <!-- Cards Grid -->
-            <div class="cards-grid">
-                <a href="https://vaulto.fi" class="card" target="_blank">
-                    <img src="Search.png" alt="Vaulto Fi" class="card-image">
-                    <div class="card-title">Fi</div>
-                </a>
+             <!-- Cards Grid -->
+             <div class="cards-grid">
+                 <a href="https://vaulto.ai" class="card" target="_blank">
+                     <img src="AI.png" alt="Vaulto AI" class="card-image">
+                     <div class="card-title">AI</div>
+                 </a>
 
-                <a href="https://vaulto.holdings" class="card" target="_blank">
-                    <img src="Holdings.png" alt="Vaulto Holdings" class="card-image">
-                    <div class="card-title">Holdings</div>
-                </a>
+                 <a href="https://vaulto.fi" class="card" target="_blank">
+                     <img src="Search.png" alt="Vaulto Fi" class="card-image">
+                     <div class="card-title">Search</div>
+                 </a>
 
-                <a href="https://vaulto.ventures" class="card" target="_blank">
-                    <img src="ventures.png" alt="Vaulto Ventures" class="card-image">
-                    <div class="card-title">Ventures</div>
-                </a>
+                 <a href="https://vaulto.holdings" class="card" target="_blank">
+                     <img src="Holdings.png" alt="Vaulto Holdings" class="card-image">
+                     <div class="card-title">Holdings</div>
+                 </a>
 
-                <a href="https://vaulto.info" class="card" target="_blank">
-                    <img src="Info.png" alt="Vaulto Info" class="card-image">
-                    <div class="card-title">Info</div>
-                </a>
-            </div>
+                 <a href="https://vaulto.ventures" class="card" target="_blank">
+                     <img src="ventures.png" alt="Vaulto Ventures" class="card-image">
+                     <div class="card-title">Ventures</div>
+                 </a>
+
+                 <a href="https://vaulto.info" class="card" target="_blank">
+                     <img src="Info.png" alt="Vaulto Info" class="card-image">
+                     <div class="card-title">Info</div>
+                 </a>
+
+                 <a href="https://vaultocredits.netlify.app" class="card" target="_blank">
+                     <img src="Credits.png" alt="Vaulto Credits" class="card-image">
+                     <div class="card-title">Credits</div>
+                 </a>
+             </div>
         </main>
 
         <!-- Footer -->
